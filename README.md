@@ -14,3 +14,7 @@ Features in source:
 - Rapid fire
 
 If you want the build with aimbot: https://www.unknowncheats.me/forum/rainbow-six-siege/396922-r6-offline-cheat.html
+
+How to compile:
+- Set character set to Multi-Byte
+- Build in Release x64
