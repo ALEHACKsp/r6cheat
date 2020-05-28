@@ -1,7 +1,7 @@
 # r6cheat
 OFFLINE ONLY R6 CHEAT SOURCE CODE 
 This cheat was threw together with little to no effort. You may experience crashing and other issues.
-I removed aimbot from the source, i have my reasons for doing so.
+I removed aimbot from the source, i have my reasons for doing so. Read features and compilation instructions below :)
 
 Features in source:
 - Rainbow glow
