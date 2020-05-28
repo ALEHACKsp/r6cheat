@@ -18,3 +18,5 @@ If you want the build with aimbot: https://www.unknowncheats.me/forum/rainbow-si
 How to compile:
 - Set character set to Multi-Byte <- won't work if you don't do this.
 - Build in Release x64
+
+Also, if you guys enjoy the cheat a +rep on uc is always appreciated :)
