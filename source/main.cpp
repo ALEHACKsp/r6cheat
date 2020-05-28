@@ -215,7 +215,7 @@ bool nR() //not the best way
     return true;
 }
 
-bool chams() //such a misleading name
+bool setGlow() 
 {
         float strength = -1.5f;
         uint64_t Glow = RPM<uint64_t>(base_address + 0x60a2628);
@@ -266,7 +266,7 @@ int main()
         profile_manager = RPM<uint64_t>(base_address + 0x53ac118); //oops
         if (GetCurrentGameMode() > 1)
         {
-            chams();
+            setGlow();
             nR();
             nS();
             nC();
