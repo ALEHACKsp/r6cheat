@@ -262,6 +262,8 @@ int main()
     std::cout << " ";
     while (1)
     {
+        game_manager = RPM<uint64_t>(base_address + 0x53beff0); //forgot about this
+        profile_manager = RPM<uint64_t>(base_address + 0x53ac118); //oops
         if (GetCurrentGameMode() > 1)
         {
             chams();
