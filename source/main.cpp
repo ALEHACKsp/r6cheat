@@ -86,7 +86,7 @@ uint64_t GetCurrentGameMode() //ty c0le for the idea.
     return gameMode; //for some reason with this check it lowers my fps unless i enable features, thonk...
 }
 
-auto Rainbow()
+auto Rainbow() //proper rainbow
 {
     static uint32_t cnt = 0;
     float freq = 0.06f; 
