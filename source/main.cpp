@@ -179,39 +179,31 @@ bool nC()
     return true;
 }
 
-bool nS()
-{
-        uintptr_t noSpread = RPM<uintptr_t>(base_address + 0x53beff0);
-        noSpread = RPM<uintptr_t>(noSpread + 0xC8);
-        noSpread = RPM<uintptr_t>(noSpread + 0x0);
-        noSpread = RPM<uintptr_t>(noSpread + 0x90);
-        noSpread = RPM<uintptr_t>(noSpread + 0xC8);
-        noSpread = RPM<uintptr_t>(noSpread + 0x278);
-        WPM<BYTE>(noSpread + 0x168, 0);
-        if (nospread)
-        {
-            WPM<float>(noSpread + 0x58, 0);
-        }
-        else
-        {
-            WPM<float>(noSpread + 0x58, 1);
-        }
-    return true;
-}
+    bool nS()
+    {
+            uintptr_t noSpread = RPM<uintptr_t>(base_address + 0x53beff0);
+            noSpread = RPM<uintptr_t>(noSpread + 0xC8);
+            noSpread = RPM<uintptr_t>(noSpread + 0x0);
+            noSpread = RPM<uintptr_t>(noSpread + 0x90);
+            noSpread = RPM<uintptr_t>(noSpread + 0xC8);
+            noSpread = RPM<uintptr_t>(noSpread + 0x278);
+            
+            if (!noSpread ) // This will prevent from writing when invalid
+                 return false; // This will prevent from writing when invalid
+     
+            WPM<bool>(noSpread + 0x58, nospread);
+            return true;
+    }
 
 bool nR() //not the best way
 {
         uintptr_t noRecoil = RPM<uintptr_t>(base_address + 0x53beff8);
         noRecoil = RPM<uintptr_t>(noRecoil + 0x110);
         noRecoil = RPM<uintptr_t>(noRecoil + 0x0);
-        if (norecoil)
-        {
-            WPM<bool>(noRecoil + 0xe2d, 0);
-        }
-        else
-        {
-            WPM<bool>(noRecoil + 0xe2d, 1);
-        }
+        if (!norecoil)
+            return false;
+    
+         WPM<bool>(noRecoil + 0xe2d, norecoil);
     return true;
 }
 
